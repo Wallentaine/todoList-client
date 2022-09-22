@@ -1,0 +1,138 @@
+.Tasks {
+    font-family: Tahoma, serif;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 60px;
+    grid-column-gap: 60px;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.createTask {
+    background: url("../assets/images/plus.png") center center;
+    width: 64px;
+    height: 64px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.task {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task__title {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #607d8b;
+    width: 100%;
+    color: white;
+    max-height: 50px;
+    overflow: hidden;
+    line-height: 26px;
+}
+
+.task__line {
+    width: 100%;
+    height: 4px;
+    background: #29434e;
+}
+
+.task__text {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background: #fffde7;
+    width: 100%;
+    max-height: 200px;
+    color: #424242;
+    border-radius: 0 0 10% 0;
+    overflow: hidden;
+    line-height: 18px;
+}
+
+.TaskEditor {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.taskEditor__buttonGroup {
+    position: fixed;
+    right: 10px;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.taskEditor__closeButton {
+    width: 32px;
+    height: 32px;
+    margin: 10px;
+    outline: none;
+    background: url("../assets/images/cancel32.png") center center;
+    border: 0;
+    cursor: pointer;
+}
+.taskEditor__saveButton {
+    width: 32px;
+    height: 32px;
+    margin: 10px;
+    outline: none;
+    background: url("../assets/images/save32.png") center center;
+    border: 0;
+    cursor: pointer;
+}
+
+.taskEditor__title {
+    border: 0;
+    overflow: hidden;
+    background: #607d8b;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 60px;
+    max-height: 60px;
+    outline: none;
+    padding: 20px;
+    font-size: 20px;
+    color: white;
+}
+
+.taskEditor__body {
+    min-width: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+    background: #fffde7;
+    outline: none;
+    padding: 20px;
+    font-size: 20px;
+    border: 0;
+}
+
+@media (max-width: 1912px) and (min-width: 1302px){
+    .Tasks {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (max-width: 1302px){
+    .Tasks {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 604px){
+    .Tasks {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
