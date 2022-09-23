@@ -3,7 +3,7 @@ import {Context} from '../index'
 import {Route, Routes, Navigate} from 'react-router-dom'
 import {privateRoutes, publicRoutes, unauthorizedRoutes} from "../router"
 import {observer} from "mobx-react-lite"
-import {AUTH_ROUTE, ERROR_ROUTE} from "../utils/consts";
+import {AUTH_ROUTE, ERROR_ROUTE} from "../utils/consts"
 
 const AppRouter = observer(() => {
 
@@ -11,13 +11,13 @@ const AppRouter = observer(() => {
 
     return (
         <Routes>
-            {user.isAuth && privateRoutes.map(({path, Component}) =>
+            {publicRoutes.map(({path, Component}) =>
                 <Route key={path} path={path} element={<Component />}/>
             )}
             {!user.isAuth && unauthorizedRoutes.map(({path, Component}) =>
                 <Route key={path} path={path} element={<Component />}/>
             )}
-            {publicRoutes.map(({path, Component}) =>
+            {user.isAuth && privateRoutes.map(({path, Component}) =>
                 <Route key={path} path={path} element={<Component />}/>
             )}
             {!user.isAuth ?

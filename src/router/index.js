@@ -26,5 +26,5 @@ export const publicRoutes = [
     {
         path: ERROR_ROUTE,
         Component: Error
-    }
+    },
 ]

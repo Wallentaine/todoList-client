@@ -1,0 +1,14 @@
+.StockButton {
+    margin-top: 10px;
+    width: 100%;
+    padding: 5px;
+    cursor: pointer;
+    background: white;
+    border: 2px solid #607d8b;
+    outline: none;
+}
+
+.StockButton:hover {
+    background: #607d8b;
+    color: white;
+}

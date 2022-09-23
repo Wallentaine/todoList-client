@@ -1,0 +1,55 @@
+.Auth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.auth__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth__modal {
+    min-height: 200px;
+    min-width: 300px;
+    margin-bottom: 100px;
+}
+
+.auth__title {
+    font-family: Tahoma, serif;
+    color: #fffde7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.auth__existAccount {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fffde7;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.auth__existAccount button {
+    background: #607d8b;
+    padding: 5px 20px;
+    border: 2px solid #607d8b;
+    cursor: pointer;
+    color: white;
+}
+
+.auth__existAccount button:hover {
+    background: white;
+    color: #607d8b;
+}

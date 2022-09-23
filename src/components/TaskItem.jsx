@@ -1,22 +1,22 @@
 import React, {useState} from 'react'
 import TaskEditor from "./TaskEditor"
 
-const TaskItem = () => {
+const TaskItem = ({task, active, setActive}) => {
 
     const [modal, setModal] = useState(false)
 
-    return (
-        <div className="task" onClick={() => setModal(!modal)}>
-            <div className="task__title">Lorem ipsum!</div>
-            <div className="task__line"></div>
-            <div className="task__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Blanditiis, minima, quod. Eum harum iusto magnam placeat!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Blanditiis, minima, quod.
-            </div>
+    const openModal = () => {
+        setModal(!modal)
+        setActive(!active)
+    }
 
-            <TaskEditor visible={modal} setVisible={setModal} action={"change"}/>
+    return (
+        <div className="task" onClick={openModal}>
+            <div className="task__title">{task.title}</div>
+            <div className="task__line"></div>
+            <div className="task__text">{task.text}</div>
+
+            <TaskEditor visible={modal} setVisible={setModal} action={"change"} id={task.id} title={task.title} text={task.text}/>
         </div>
     )
 }
